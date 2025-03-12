@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import BookCard from "../components/BookCard";
 
 const AllBooks = () => {
+  const [books, setBooks] = useState([]);
+
+  const getBooks = async () => {
+    const response = await axios.get('Backend endpoint link for all books added');
+    // console.table(response.data);
+    setBooks(response.data);
+  }
+
+  useEffect(() => {
+    getBooks();
+  }, []);
   return (
     <div>
       <NavBar />
