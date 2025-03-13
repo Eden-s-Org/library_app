@@ -15,26 +15,27 @@ const NavBar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <nav
-      className={`h-[5rem] fixed top-0 left-0 w-full flex flex-row justify-between px-10 md:px-20 py-4 transition-all duration-300 ${
+      className={`flex flex-wrap items-center z-10 px-10 h-[5rem] fixed top-0 left-0 w-[100%] justify-between  py-4 transition-all duration-300 ${
         scrolling ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className=" flex items-center justify-between">
         <h1 className="text-xl font-bold text-blue-950">EdenBOOKS</h1>
       </div>
-      <div className="md:flex gap-6 items-center text-blue-950">
+      <div className=" md:flex gap-6 items-center text-blue-950">
         <Link to={"/"}>Home</Link>
         <Link to={"/allbooks"}>All Books</Link>
-        <Link to={"/addbooks"}>Add Book</Link>
+        <Link to={"/addbook"}>Add Book</Link>
         <div className="flex items-center border border-blue-900 rounded-lg">
           <input
             type="text"
             placeholder="Search Book"
-            className="   rounded outline-none w-full  "
+            className=" rounded outline-none w-full  "
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"

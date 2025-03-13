@@ -9,29 +9,28 @@ import annefrank from "../assets/images/annefrank.png";
 import bookthief from "../assets/images/bookthief.png";
 import { FaSearch, FaUserLock, FaBook } from "react-icons/fa";
 
-
 const Home = () => {
   return (
     <div>
       <NavBar />
       <section className="mt-16 ">
-        <div className="bg-[url(assets/images/heropic1.png)] h-[700px] bg-cover bg-center flex items-center ps-10">
+        <div className="bg-[url(assets/images/young.png)] h-[700px] bg-cover bg-center flex items-center ps-10">
           <div>
-            <h1 className="text-4xl font-bold  text-white animate-bounce">
+            <h1 className="text-5xl font-bold font-[nunito] text-white animate-bounce">
               Welcome to EdenBOOKS <br /> Your Smart Library Companion
             </h1>
-            <span className="block mt-2 text-white text-2xl ">
+            <span className="block mt-2 text-white text-3xl font-[nunito]">
               Effortless Library Management, Anytime, Anywhere
             </span>
           </div>
         </div>
       </section>
       <section className="">
-        <h1 className="text-3xl font-bold text-center text-blue-950 py-15">
+        <h1 className="text-2xl md:text-4xl font-bold text-center font-[nunito] text-blue-950 py-15">
           Popular Books
         </h1>
-        <div className="grid grid-cols-4 py-5 ps-8">
-          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform h-[400px] w-[300px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-[90%] mx-auto font-[nunito]">
+          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform ">
             <h3 className="text-lg font-semibold text-white">
               Title: A Game of Thrones
             </h3>
@@ -42,7 +41,7 @@ const Home = () => {
               className="h-[300px] w-[300px] object-cover rounded-md mb-4"
             />
           </div>
-          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform h-[400px] w-[300px]">
+          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform ">
             <h3 className="text-lg font-semibold text-white">
               Title: To Kill a Mockingbird
             </h3>
@@ -52,9 +51,8 @@ const Home = () => {
               alt="Mockingbird"
               className="h-[300px] w-[300px] object-cover rounded-md mb-4"
             />
-            ;
           </div>
-          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform h-[400px] w-[300px]">
+          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform ">
             <h3 className="text-lg font-semibold text-white">
               Title: The Diary of a Young Girl
             </h3>
@@ -65,7 +63,7 @@ const Home = () => {
               className="h-[300px] w-[300px] object-cover rounded-md mb-4"
             />
           </div>
-          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform h-[400px] w-[300px]">
+          <div className="bg-blue-950 text-white shadow-lg rounded-lg p-4 hover:scale-105 transition-transform ">
             <h3 className="text-lg font-semibold text-white">
               Title: The Book Thief
             </h3>
@@ -88,89 +86,127 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-gray-200 py-12 px-6">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-blue-950 mb-6">What People Say</h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-        <div className="bg-white p-6 rounded-2xl shadow-md">
-            <p className="text-gray-700 italic">
-              "Great library App"
-            </p>
-            <div className="flex items-center mt-4">
-             
-              <div>
-                <h4 className="text-gray-900 font-semibold">William King</h4>
-                <p className="text-sm text-gray-500">Senior Designer</p>
-              </div>
-            </div>
-          </div>
-        
-          <div className="bg-white p-6 rounded-2xl shadow-md">
-            <p className="text-gray-700 italic">
-              "Working with EdenBooks was a fantastic experience. Their attention to detail and design skills are top-notch!"
-            </p>
-            <div className="flex items-center mt-4">
-             
-              <div>
-                <h4 className="text-gray-900 font-semibold">Patterson</h4>
-                <p className="text-sm text-gray-500">Senior Designer</p>
-              </div>
-            </div>
-          </div>
+      <section className="bg-gray-200 py-12 px-6 ">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-blue-950 mb-6 font-[nunito]">
+            What People Say
+          </h2>
 
-         
-          <div className="bg-white p-6 rounded-2xl shadow-md">
-            <p className="text-gray-700 italic">
-              "EdenBooks is a skilled and dedicated developer. Their work truly speaks for itself."
-            </p>
-            <div className="flex items-center mt-4">
-             
-              <div>
-                <h4 className="text-gray-900 font-semibold">RAB</h4>
-                <p className="text-sm text-gray-500">Tech Lead</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-2xl shadow-md">
+              <p className="text-gray-700 italic font-[nunito]">"Great library App"</p>
+              <div className="flex items-center mt-4">
+                <div>
+                  <h4 className="text-gray-900 font-semibold font-[nunito]">William King</h4>
+                  <p className="text-sm text-gray-500 font-[nunito]">Senior Designer</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-md">
+              <p className="text-gray-700 italic font-[nunito]">
+                "Working with EdenBooks was a fantastic experience. Their
+                attention to detail and design skills are top-notch!"
+              </p>
+              <div className="flex items-center mt-4">
+                <div>
+                  <h4 className="text-gray-900 font-semibold font-[nunito]">Patterson</h4>
+                  <p className="text-sm text-gray-500 font-[nunito]">Senior Designer</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white pt-6 rounded-2xl shadow-md">
+              <p className="text-gray-700 italic font-[nunito]">
+                "EdenBooks is a skilled and dedicated developer. Their work
+                truly speaks for itself."
+              </p>
+              <div className="flex items-center mt-4">
+                <div>
+                  <h4 className="text-gray-900 font-semibold">RAB</h4>
+                  <p className="text-sm text-gray-500 font-[nunito]">Tech Lead</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto text-center px-6">
-        <h2 className="text-3xl font-bold text-blue-950 mb-10">
-          Explore Features
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        
-          <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center">
-            <FaSearch className="text-5xl text-blue-950" />
-            <h3 className="text-lg font-semibold mt-4">Search</h3>
-            <p className="text-gray-600 text-sm mt-2 text-center">
-              Find books easily and read them with one click.
-            </p>
+
+      <section class="h-fit">
+          <div class="bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l grid grid-cols-4 gap-10  mx-auto w-full py-20 text-center">
+            <div class="">
+              <div class="text-3xl md:text-6xl text-white font-bold my-5">
+                1024
+              </div>
+              <div class="text-2xl md:text-3xl text-white font-semibold my-5">
+                All Authors
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-3xl md:text-6xl text-white font-bold my-5">
+                624
+              </div>
+              <div class="text-2xl md:text-3xl text-white font-semibold my-5">
+                All Books
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-3xl md:text-6xl text-white font-bold my-5">
+                104
+              </div>
+              <div class="text-2xl md:text-3xl text-white font-semibold my-5">
+                Online Reviews
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-3xl md:text-6xl text-white font-bold my-5">
+                1024
+              </div>
+              <div class="text-2xl md:text-3xl text-white font-semibold my-5">
+                Community
+              </div>
+            </div>
           </div>
+      </section>
 
-      
-          <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center">
-            <FaUserLock className="text-5xl text-blue-950" />
-            <h3 className="text-lg font-semibold mt-4">Log In</h3>
-            <p className="text-gray-600 text-sm mt-2 text-center">
-              Create an account to enjoy benefits in the library system.
-            </p>
-          </div>
 
-        
-          <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center">
-            <FaBook className="text-5xl text-blue-950" />
-            <h3 className="text-lg font-semibold mt-4">Add Books</h3>
-            <p className="text-gray-600 text-sm mt-2 text-center">
-              Upload books to your collection.
-            </p>
+
+      <section className=" bg-gray-100">
+        <div className="max-w-6xl mx-auto text-center px-6 py-16">
+          <h2 className="text-3xl font-bold text-blue-950 mb-10 font-[nunito]">
+            Explore Features
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center">
+              <FaSearch className="text-5xl text-blue-950" />
+              <h3 className="text-lg font-semibold mt-4">Search</h3>
+              <p className="text-gray-600 text-sm mt-2 text-center">
+                Find books easily and read them with one click.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center">
+              <FaUserLock className="text-5xl text-blue-950" />
+              <h3 className="text-lg font-semibold mt-4">Log In</h3>
+              <p className="text-gray-600 text-sm mt-2 text-center">
+                Create an account to enjoy benefits in the library system.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center">
+              <FaBook className="text-5xl text-blue-950" />
+              <h3 className="text-lg font-semibold mt-4">Add Books</h3>
+              <p className="text-gray-600 text-sm mt-2 text-center">
+                Upload books to your collection.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
       <Footer />
     </div>
   );

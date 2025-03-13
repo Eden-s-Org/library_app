@@ -15,6 +15,6 @@ const BookCard = ({ title, image, ibsn, }) => {
             <Link to={'/book'} className="ml-4 bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l px-10 py-3 rounded-lg text-white text-center hover:font-extrabold">Read More</Link>
         </div>
     );
-};
+}; 
 
 export default BookCard;

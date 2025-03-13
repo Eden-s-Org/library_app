@@ -7,12 +7,12 @@ const Footer = () => {
   <footer className="bg-blue-950 text-white py-8">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           
           <div>
             <h2 className="text-xl font-bold">EdenBOOKS</h2>
             <p className="mt-2 text-gray-300">
-              Your Smart Library Companion – Manage your books effortlessly.
+              Your Smart Library Companion <br/> Manage your books effortlessly
             </p>
           </div>
 
