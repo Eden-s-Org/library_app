@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from "react-router";
 import { FaStar } from 'react-icons/fa6';
 
-const BookCard = ({ title, image, isbn, category, yearofpublication, pages }) => {
+const BookCard = ({ title, author, image, isbn, category, yearofpublication, pages }) => {
     return (
         <>
-            <div className="bg-white rounded-t-lg shadow-2xl hover:scale-105 transition-transform hover:shadow-xl hover:shodow-blue-950 h-120">
+            <div className="bg-white shadow-2xl hover:scale-105 transition-transform hover:shadow-xl hover:shodow-blue-950 h-130 rounded-t-xl">
                 <div className="bg-blue-100 h-[50%]">
                     <img src={`https://savefiles.org/${image}?shareable_link=640`} alt={title} className="rounded-t-lg h-[100%] w-[100%]"/>
                 </div>
@@ -15,17 +15,18 @@ const BookCard = ({ title, image, isbn, category, yearofpublication, pages }) =>
                         <p className=''><span className='text-blue-950 font-semibold text-sm md:text-md'>ISBN:</span> <span className='
                 italic text-blue-950'>{isbn}</span></p>
                         <p className=''><span className='text-blue-950 font-semibold text-sm md:text-md'>Pages:</span> <span className='text-blue-950'>{pages}</span></p>
+                        <p className=''><span className='text-blue-950 font-semibold text-sm md:text-md'>Year:</span> <span className='text-blue-950'>{yearofpublication}</span></p>
                     </div>
                     <div className="w-[90%] mx-auto border-t border-gray-300 py-1"></div>
 
                     <div className="flex justify-between items-center mb-4">
                         <div className="flex gap-3 items-center">
                             <div className="">
-                                <img src={`https://savefiles.org/${image}?shareable_link=640`} alt="" className="rounded-full h-[40px] w-[40px]" />
+                                <img src={`https://savefiles.org/${image}?shareable_link=640`} alt={title} className="rounded-full h-[40px] w-[40px] bg-blue-100" />
                             </div>
                             <div className="">
                                 <div className="text-blue-950">Authored by:</div>
-                                <div className="text-blue-950 font-bold">James Well</div>
+                                <div className=" text-blue-950 font-bold">{author}</div>
                             </div>
                         </div>
                         <div className="">
@@ -35,7 +36,7 @@ const BookCard = ({ title, image, isbn, category, yearofpublication, pages }) =>
                                 <FaStar className='text-blue-950' />
                                 <FaStar className='text-gray-400' />
                             </div>
-                            <div className="text-blue-950">3.8 Ratings</div>
+                            <div className="text-blue-950 text-[12px]">3.8 Ratings</div>
                         </div>
                     </div>
                     <div className='flex'>

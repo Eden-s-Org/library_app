@@ -29,11 +29,13 @@ const AllBooks = () => {
             {books.map((book) => {
               return (
                 <BookCard
+                key={book.id}
                   image={book.image}
-                  key={book.id}
                   title={book.title}
+                  author={book.author}
                   isbn={book.ISBN}
                   pages={book.numberOfPages}
+                  // yearofpublication={book.yearOfPublication}
 
 
                 />
