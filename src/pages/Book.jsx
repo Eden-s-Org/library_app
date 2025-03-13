@@ -15,10 +15,10 @@ const Book = ({ title, image, author, isbn, }) => {
           <Link to={'/allbooks'} className="bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90%  p-3 rounded-full shadow-lg w-10 h-10 text-lg hover:bg-gradient-to-l text-white hover:font-extrabold">
             <FaArrowLeftLong className="text-white" />
           </Link>
-            <img src={Image} alt={title} className="rouded-xl" />
+            <img src={`https://savefiles.org/${image}?shareable_link=640`} alt={title} className="rouded-xl" />
           </div>
           <div class="flex flex-col justify-evenly">
-            <h2 class="text-2xl md:text-5xl font-bold text-blue-950 mb-10 mt-7">Title of the Book</h2>
+            <h2 class="text-2xl md:text-5xl font-bold text-blue-950 mb-10 mt-7">{title}</h2>
             <div class="flex mt-1">
               <div class="border border-blue-950 my-3 md:my-5 w-[70px] "></div>
               <h2 class="text-blue-950 mx-4 md:mx-4">ABOUT US</h2>

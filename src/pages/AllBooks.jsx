@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import BookCard from "../components/BookCard";
 import PagesLayouts from "../layouts/PagesLayouts";
 import ScrollTop from "../components/ScrollTop";
+import axios from "axios";
 
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
 
   const getBooks = async () => {
-    const response = await axios.get('Backend endpoint link for all books added');
+    const response = await axios.get('https://library-api-t61c.onrender.com/library');
     // console.table(response.data);
     setBooks(response.data);
   }
@@ -18,7 +17,7 @@ const AllBooks = () => {
     getBooks();
   }, []);
   return (
-      <PagesLayouts>
+    <PagesLayouts>
       <section className="my-25">
         <div class="flex flex-col justify-center items-center mb-8 gap-y-2">
           <h2 class="text-blue-950">POPULAR BOOKS</h2>
@@ -27,9 +26,17 @@ const AllBooks = () => {
         </div>
         <div className=" bg-gray-50 relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 w-[90%] mx-auto">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => {
+            {books.map((book) => {
               return (
-                <BookCard key={i} />
+                <BookCard
+                  image={book.image}
+                  key={book.id}
+                  title={book.title}
+                  isbn={book.ISBN}
+                  pages={book.numberOfPages}
+
+
+                />
               );
             })}
           </div>
@@ -52,7 +59,7 @@ const AllBooks = () => {
         </div>
       </section>
       <ScrollTop />
-      </PagesLayouts>
+    </PagesLayouts>
 
   );
 };
