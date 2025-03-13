@@ -47,6 +47,6 @@ const BookCard = ({ title, image, ibsn, category, yearofpublication, }) => {
 
         </>
     );
-};
+}; 
 
 export default BookCard;
