@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Link } from "react-router";
@@ -13,13 +14,13 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <section className="mt-16 ">
+      <section className="">
         <div className="bg-[url(assets/images/young.png)] h-[700px] bg-cover bg-center flex items-center ps-10">
-          <div>
-            <h1 className="text-5xl font-bold font-[nunito] text-white animate-bounce">
+          <div className="bg-blue-950 p-10 rounded-lg opacity-75">
+            <h1 className="text-2xl md:text-5xl font-bold font-[nunito] text-white animate-bounce drop-shadow-lg"> 
               Welcome to EdenBOOKS <br /> Your Smart Library Companion
             </h1>
-            <span className="block mt-2 text-white text-3xl font-[nunito]">
+            <span className="block mt-2 text-white text-xl md:text-3xl font-[nunito] drop-shadow-lg ">
               Effortless Library Management, Anytime, Anywhere
             </span>
           </div>
@@ -78,7 +79,7 @@ const Home = () => {
 
         <div className="flex justify-center items-center py-10">
           <Link
-            to={"/book"}
+            to={"/allbooks"}
             className="ml-4 bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l px-10 py-3 rounded-lg text-white text-center hover:font-extrabold"
           >
             View More Books
@@ -89,7 +90,7 @@ const Home = () => {
       <section className="bg-gray-200 py-12 px-6 ">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-blue-950 mb-6 font-[nunito]">
-            What People Say
+           Testimonials
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
