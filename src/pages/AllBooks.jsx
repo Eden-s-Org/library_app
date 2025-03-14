@@ -10,6 +10,7 @@ const AllBooks = () => {
   const getBooks = async () => {
     const response = await axios.get('https://library-api-t61c.onrender.com/library');
     // console.table(response.data);
+    console.log(response.data);
     setBooks(response.data);
   }
 
@@ -21,22 +22,17 @@ const AllBooks = () => {
       <section className="my-25">
         <div class="flex flex-col justify-center items-center mb-8 gap-y-2">
           <h2 class="text-blue-950">POPULAR BOOKS</h2>
-          
+
           <h2 class="text-3xl md:text-5xl text-blue-950 font-bold">Special Courses</h2>
           <div class="border border-blue-950 my-5 w-[10%]"></div>
         </div>
         <div className=" bg-gray-50 relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 w-[90%] mx-auto">
-            {books.map((book) => {
+            {books.length > 0 && books.map((book) => {
               return (
                 <BookCard
-                key={book.id}
-                  image={book.image}
-                  title={book.title}
-                  author={book.author}
-                  isbn={book.ISBN}
-                  pages={book.numberOfPages}
-                  // yearofpublication={book.yearOfPublication}
+                  key={book.id}
+                  book={book}
 
 
                 />
@@ -53,16 +49,11 @@ const AllBooks = () => {
         </div>
         <div className=" bg-gray-50">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5 w-[90%] mx-auto">
-          {books.map((book) => {
+          {books.length > 0 && books.map((book) => {
               return (
                 <BookCard
-                key={book.id}
-                  image={book.image}
-                  title={book.title}
-                  author={book.author}
-                  isbn={book.ISBN}
-                  pages={book.numberOfPages}
-                  // yearofpublication={book.yearOfPublication}
+                  key={book.id}
+                  book={book}
 
 
                 />

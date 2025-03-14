@@ -20,8 +20,8 @@ const NavBar = () => {
   }, []);
   return (
     <nav
-      className={`flex flex-row flex-wrap items-center z-10 px-10 top-0 left-0 w-screen justify-between  py-4 transition-all duration-300 ${
-        scrolling ? "bg-white shadow-md" : "bg-transparent"
+      className={`flex flex-row flex-wrap items-center z-10 px-10 fixed top-0 left-0 w-screen justify-between  py-4 transition-all duration-300 ${
+        scrolling ? "bg-white shadow-md" : "bg-white"
       }`}
     >
       <div className=" flex items-center justify-between">
