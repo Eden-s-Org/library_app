@@ -20,18 +20,21 @@ const NavBar = () => {
   }, []);
   return (
     <nav
-      className={`flex flex-wrap items-center z-10 px-10 h-[5rem] fixed top-0 left-0 w-[100%] justify-between  py-4 transition-all duration-300 ${
+      className={`flex flex-row flex-wrap items-center z-10 px-10 top-0 left-0 w-screen justify-between  py-4 transition-all duration-300 ${
         scrolling ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className=" flex items-center justify-between">
-        <h1 className="text-xl font-bold text-blue-950">EdenBOOKS</h1>
+        <h1 className="text-2xl font-bold text-blue-950 font-[nunito]">EdenBOOKS</h1>
       </div>
-      <div className=" md:flex gap-6 items-center text-blue-950">
+      <div className="flex flex-1 flex-row gap-2 items-center justify-end text-blue-950 text-bold font-[nunito]">
+        <div className="flex flex-row gap-4">
         <Link to={"/"}>Home</Link>
         <Link to={"/allbooks"}>All Books</Link>
-        <Link to={"/addbook"}>Add Book</Link>
-        <div className="flex items-center border border-blue-900 rounded-lg">
+        <Link to={"/addbook"}>Add Book</Link> 
+        </div>
+        
+        <div className="flex items-center justify-center border border-blue-900 rounded-lg max-w-40">
           <input
             type="text"
             placeholder="Search Book"
@@ -55,7 +58,7 @@ const NavBar = () => {
 
         <Link
           to={"/auth"}
-          className="ml-4 bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l px-10 py-3 rounded-lg text-white text-center hover:font-extrabold"
+          className="w-16 bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l p-2 rounded-lg text-white text-center hover:font-extrabold"
         >
           Log In
         </Link>
