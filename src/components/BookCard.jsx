@@ -40,7 +40,7 @@ const BookCard = ({ title, author, image, isbn, category, yearofpublication, pag
                         </div>
                     </div>
                     <div className='flex'>
-                        <Link to={'/book?id=${book.id}'} className=" bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l px-5 py-2 rounded-lg text-white text-center hover:font-extrabold w-[100%]">Read More</Link>
+                        <Link to={'/book'} className=" bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l px-5 py-2 rounded-lg text-white text-center hover:font-extrabold w-[100%]">Read More</Link>
                     </div>
                 </div>
             </div>
