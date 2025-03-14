@@ -9,6 +9,7 @@ import thronespic2 from "../assets/images/thronespic2.png";
 import annefrank from "../assets/images/annefrank.png";
 import bookthief from "../assets/images/bookthief.png";
 import { FaSearch, FaUserLock, FaBook } from "react-icons/fa";
+import ScrollTop from "../components/ScrollTop";
 
 const Home = () => {
   return (
@@ -208,6 +209,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <ScrollTop />
       <Footer />
     </div>
   );
