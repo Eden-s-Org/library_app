@@ -1,29 +1,41 @@
 import { useState } from "react";
 import backgroundImage from "../assets/images/heropic.png"; // Adjust path accordingly
 import NavBar from "../components/NavBar";
+import { useNavigate } from "react-router";
 
 export default function AddBookPage() {
-  const [formData, setFormData] = useState({
-    author: "",
-    title: "",
-    isbn: "",
-    category: "",
-    librarian: "",
-    yearOfPublication: "",
-    numberOfPages: "",
-    coverImage: null,
-    uploadFile: null,
-  });
-
-  const handleChange = (e) => {
-    const { name, type } = e.target;
-    const value = type === "file" ? e.target.files[0] : e.target.value;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Book Data Submitted:", formData);
+
+    const formData = new FormData();
+    formData.append("title", e.target.title.value);
+    formData.append("bookDescription", e.target.bookDescription.value);
+    formData.append("author", e.target.author.value);
+    formData.append("ISBN", e.target.ISBN.value);
+    formData.append("category", e.target.category.value);
+    formData.append("yearOfPublication", e.target.yearOfPublication.value);
+    formData.append("numberOfPages", e.target.numberOfPages.value);
+    formData.append("image", e.target.image.files[0]); // Uploading a file
+
+    try {
+      const response = await fetch("https://library-api-t61c.onrender.com/library", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+console.log(result)
+
+if (!response.ok) {
+  throw new Error("Failed to submit the form");
+}
+
+alert("Book added successfully!");
+navigate("/allbooks");
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (
@@ -39,46 +51,88 @@ export default function AddBookPage() {
       <div className="bg-white p-6 shadow-lg w-full max-w-lg rounded-lg relative z-10">
         <h2 className="text-center text-xl font-bold">Add a Book</h2>
         <form className="space-y-4 mt-4" onSubmit={handleSubmit}>
-          {Object.keys(formData).map((key) =>
-            key !== "coverImage" && key !== "uploadFile" ? (
+              <div>
               <input
-                key={key}
+                
                 type="text"
-                name={key}
-                placeholder={key.charAt(0).toUpperCase() + key.slice(1)}
-                value={formData[key]}
-                onChange={handleChange}
+                name="title"
+                placeholder= "Title"
                 className="w-full p-2 border rounded"
                 required
               />
-            ) : null
-          )}
+              </div>
+              <div>
+              <input
+                
+                type="text"
+                name="bookDescription"
+                placeholder= "Description"
+                className="w-full p-2 border rounded"
+                required
+              />
+              </div>
+              <div>
+              <input
+                
+                type="text"
+                name="author"
+                placeholder= "Author Name"
+                className="w-full p-2 border rounded"
+                required
+              />
+              </div>
+              <div>
+              <input
+                
+                type="text"
+                name="ISBN"
+                placeholder= "ISBN"
+                className="w-full p-2 border rounded"
+                required
+              />
+              </div>
+              <div>
+              <input
+                
+                type="text"
+                name="category"
+                placeholder= "Category"
+                className="w-full p-2 border rounded"
+                required
+              />
+              </div>
+              <div>
+              <input
+                
+                type="text"
+                name="yearOfPublication"
+                placeholder= "Year"
+                className="w-full p-2 border rounded"
+                required
+              />
+              </div>
+              <div>
+              <input
+                
+                type="text"
+                name="numberOfPages"
+                placeholder= "Number of Pages"
+                className="w-full p-2 border rounded"
+                required
+              />
+              </div>
+              
           <div>
             <label className="block text-sm font-medium">
-              Cover Image (JPEG, PNG)
+              image (JPEG, PNG)
             </label>
             <input
               type="file"
-              name="coverImage"
-              accept="image/jpeg, image/png"
-              onChange={handleChange}
-              className="w-full p-2 border rounded"
+              name="image"
               required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium">
-              Upload File (PDF, DOC)
-            </label>
-            <input
-              type="file"
-              name="uploadFile"
-              accept="application/pdf, application/msword"
-              onChange={handleChange}
-              className="w-full p-2 border rounded"
-              required
-            />
-          </div>
+          
           <button
             className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
             type="submit"

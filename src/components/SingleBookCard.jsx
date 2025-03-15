@@ -69,7 +69,7 @@ const SingleBookCard = ({book, onDelete}) => {
                         <div className="flex justify-end items-center mt-5 w-[90%] gap-5 relative">
 
                             <div class=" flex">
-                                <Link to={'/edit'}
+                                <Link to={`/edit/${book.id}`}
                                     class="items-end bg-gradient-to-r from-[#056d80] from-10% to-blue-950 to-90% hover:bg-gradient-to-l px-10 py-3 rounded-lg text-white text-center hover:font-extrabold ml-auto mb-5">Edit</Link>
                             </div>
 
