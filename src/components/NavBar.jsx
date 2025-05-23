@@ -25,15 +25,17 @@ const NavBar = () => {
       }`}
     >
       <div className=" flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-blue-950 font-[nunito]">EdenBOOKS</h1>
+        <h1 className="text-2xl font-bold text-blue-950 font-[nunito]">
+          EdenBOOKS
+        </h1>
       </div>
       <div className="flex flex-1 flex-row gap-2 items-center justify-end text-blue-950 text-bold font-[nunito]">
         <div className="flex flex-row gap-4">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/allbooks"}>All Books</Link>
-        <Link to={"/addbook"}>Add Book</Link> 
+          <Link to={"/"}>Home</Link>
+          <Link to={"/allbooks"}>All Books</Link>
+          <Link to={"/addbook"}>Add Book</Link>
         </div>
-        
+
         <div className="flex items-center justify-center border border-blue-900 rounded-lg max-w-40">
           <input
             type="text"

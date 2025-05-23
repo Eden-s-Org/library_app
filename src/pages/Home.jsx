@@ -1,8 +1,6 @@
 import React from "react";
 
-
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import { Link } from "react-router";
 import mockingbird from "../assets/images/mockingbird.png";
 import thronespic2 from "../assets/images/thronespic2.png";
@@ -10,7 +8,7 @@ import annefrank from "../assets/images/annefrank.png";
 import bookthief from "../assets/images/bookthief.png";
 import { FaSearch, FaUserLock, FaBook } from "react-icons/fa";
 import ScrollTop from "../components/ScrollTop";
-
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
